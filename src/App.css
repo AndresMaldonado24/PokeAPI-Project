@@ -1,0 +1,392 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+nav {
+  width: 100%;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 25px;
+  font-weight: bold;
+}
+.App{
+  max-width: 1280px;
+  margin-top: 15px;
+}
+.searchbar-container{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 25px 105px 25px 0;
+}
+#input-search,#btn-search{
+  border: 1px solid white;
+}
+#input-search{
+  width: 150px;
+  border-radius: 10px 0px 0px 10px;
+  border-right: none;
+}
+#input-search:focus{
+  outline: none
+}
+#btn-search{
+  width: 50px;
+  border-radius: 0px 10px 10px 0px;
+  border-left: none;  
+}
+#btn-search:hover{
+  cursor: pointer;
+}
+.select-container{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 25px 105px 25px 0;
+  gap: 10px;
+}
+.display {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.card {  
+ height: 250px;
+ width: 200px;
+ border: 1px white solid;
+ display: flex;
+ flex-flow: column nowrap;
+ gap:15px;
+ border-radius: 20px;
+ overflow: hidden;
+}
+.sprite{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sprite img {
+  width: 100px;
+  height: 100px;
+}
+.name{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.number{
+  font-size: 20px;
+  font-weight: bold;;
+}
+.pokeName{
+  font-size: 18px;
+  font-style: italic;
+}
+.types{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.types span{
+  width: 55px;
+  height: 25px;
+}
+.button-container{
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+}
+/*---Types - Spans---*/
+.grass{  
+  border: 1px green solid;
+  border-radius: 5px;
+  background-color: greenyellow;
+  color: green;
+}
+.poison{  
+  border: 1px violet solid;
+  border-radius: 5px;
+  background-color: purple;
+  color: violet;
+}
+.fire{
+  border: 1px red solid;
+  border-radius: 5px;
+  background-color: rgb(141, 6, 6);
+  color: red;
+}
+.flying{
+  border: 1px white solid;
+  border-radius: 5px;
+  background-color: rgb(151, 177, 233);
+  color: white;
+}
+.water{
+  border: 1px cyan solid;
+  border-radius: 5px;
+  background-color: blue;
+  color: cyan;
+}
+.bug{
+  border: 1px yellowgreen solid;
+  border-radius: 5px;
+  background-color: yellow;
+  color: yellowgreen;
+}
+.normal{
+  border: 1px rgba(0, 0, 0, 0.6) solid;
+  border-radius: 5px;
+  background-color: rgba(250, 240, 227, 0.966);
+  color: rgba(0, 0, 0, 0.6);
+}
+.electric{
+  border: 1px yellow solid;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 0, 0.562);
+  color: yellow;
+}
+.psychic{
+  border: 1px rgb(194, 4, 252) solid;
+  border-radius: 5px;
+  background-color: rgb(115, 34, 247);
+  color: rgb(194, 4, 252);
+}
+.fairy{
+  border: 1px rgb(245, 0, 192) solid;
+  border-radius: 5px;
+  background-color: rgb(255, 192, 252);
+  color: rgb(245, 0, 192);
+}
+.rock{
+  border: 1px brown solid;
+  border-radius: 5px;
+  background-color: darkgoldenrod;
+  color: brown;  
+}
+.ground{
+	border: 1px darkgoldenrod solid;
+  border-radius: 5px;
+  background-color: rgba(165, 77, 42, 0.986);
+  color: darkgoldenrod;  
+}
+.dark{
+	border: 1px whitesmoke solid;
+  border-radius: 5px;
+  background-color: black;
+  color: whitesmoke;
+}
+.ghost{
+	border: 1px #A292BC solid;
+  border-radius: 5px;
+  background-color: #705898;
+  color: #a292bc;	
+}
+.steel{
+	border: 1px #787887 solid;
+	border-radius: 5px;
+	background: #B8B8D0;
+	color: #787887;
+}
+.ice{
+	border: 1px #638D8D solid;
+	border-radius: 5px;
+	background: #98D8D8;
+	color: #638D8D;
+	
+}
+.fighting{
+	border: 1px #7D1F1A solid;
+	border-radius: 5px;
+	background: #C03028;
+	color: #7D1F1A;
+}
+.dragon{
+	border: 1px #6e5904 solid;
+	border-radius: 5px;
+	background: #C6A114;
+	color: #6e5904;
+}
+/*OVERLAY MODALS*/
+.overlay{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left:0;
+  background-color: rgb(0,0,0,0.5);
+}
+/*MODALS SIZE*/
+.modalMedium{
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 800px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  
+}
+@media (max-width: 320px){
+  .modalMedium{
+    width: 300px;
+    height: 400px;
+  }
+}
+/*MODAL CONTENT*/
+.modalHeader{
+  height: 5%;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px !important; 
+}
+.modalBody{
+  height: 90%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;  
+}
+.modalFooter{
+  height: 5%;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px !important;
+}
+.modalHeader, .modalBody, .modalFooter{
+  margin: auto;
+}
+/*MODAL BUTTONS*/
+#closeModalButton{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+/*POKEMON STATS DISPLAY*/
+.pokemonDisplay{
+  width: 150px;
+  height: 150px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  right: 30px;
+  border-radius: 50%;
+  border: red 4px solid;
+  overflow: hidden;
+}
+#displayBackgound{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-top: 90px;  
+}
+#displaySprite{
+  position: relative;
+  top: -145px;
+  left: 55px;
+}
+.displayColumn{
+  display: flex;
+  flex-direction: column;
+}
+.typeDisplay{
+  width: 130px;
+  position: relative;
+  top: 115px;
+  left: -10px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+.typeDisplay span{
+  width: 55px;
+  height: 25px;
+  text-align: center;
+}
+.statsDisplay{
+  width: 200px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+  left:50px;  
+  border-radius: 15px;
+  background-color: whitesmoke;  
+}
+.statsDisplayTitle{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 15px 0px 0px;  
+}
+#statContainer{  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  margin: 5px 0px;
+}
+.stateName{
+  width: 170px;  
+  text-align: center;
+  font-size: 12px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: red;
+  color: white;
+  font-weight: bold; 
+}
+.stateNumber{
+  width: 170px; 
+  font-weight: bold;  
+  text-align: center;
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;  
+}
+.dataContainer{
+  margin-top: 50px;
+}
+.double, .half, .none{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  margin: 10px 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+.container, .dataContainer{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.infoContainer{
+  display: flex;
+  flex-flow: row nowrap;
+}
